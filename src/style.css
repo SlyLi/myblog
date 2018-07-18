@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+}
+
+header {
+    height: 60PX;
+    width: 100%;
+    background-color: #96b97d;
+}
+
+.my_nav {
+    background: #b1dfbb;
+}
+
+.container {
+    margin: 0px auto;
+}
