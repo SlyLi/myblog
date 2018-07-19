@@ -5,6 +5,7 @@
  * Date: 2018/7/17 0017
  * Time: 下午 2:29
  */
+include "boot.php";
 
 $id= $_POST["id"];
 $passwd=$_POST["passwd"];
@@ -15,12 +16,15 @@ $passwd=$_POST["passwd"];
         $result = mysqli_query($connection,$sql);
         if(mysqli_num_rows($result)>0)
         {
-            header("location:index.php");
-            $_SESSION['loginError'] = null;
+            $_SESSION["loginError"] = null;
+
+           // header("location:index.php");
+            die();
+
         }
         else
         {
-            $error="请检查用户名或密码是否正确！";
+            $_SESSION["loginError"] ="请检查用户名或密码是否正确！";
             header('location:login.php');
-            $_SESSION['loginError'] = $error;
+            die();
         }

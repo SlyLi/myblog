@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="src/style.css" type="text/css">
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css"> 
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/jquery/jquery.min.js"></script>
+    <script src="src/script.js"></script>
 </head>
 <body>
 
@@ -47,8 +49,9 @@
     </form>
   </div>
 </nav>
+<a href="#" class="hidden alert alert-primary " style="position: fixed;bottom:5px" id="back_to_top">返回顶部</a>
 
-<div class=" container bg-light mt-3 mb-3 row-fluid">
+<div class=" container bg-red mt-3 mb-3 row-fluid bg-light">
     <div class="row">
         <div class="col-md-9">
     

@@ -6,10 +6,10 @@
  * Time: 上午 9:43
  */
 
-include 'boot.php';
+include "boot.php";
 
 
-$render['articles'] = getArticles();
+$render["articles"] = getArticles();
 
 view($render);
 //

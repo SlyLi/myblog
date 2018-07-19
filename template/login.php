@@ -1,20 +1,24 @@
 <?php include 'header.php';?>
+<?php if($_SESSION['loginError']):?>
 
+<?php endif;?>
     <form action="loginpost.php" method="post">
         <div class="form-group">
-            <label >ID</label>
-            <input type="text" class="form-control" name="id">
+            <label >账号</label>
+            <input type="text" class="form-control" name="id" placeholder="Identity">
         </div>
         <div class="form-group">
-            <label >PASSWORD</label>
-            <input type="password" class="form-control" name="passwd">
+            <label >密码</label>
+            <input type="password" class="form-control" name="passwd" placeholder="Password">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div>
+            <button type="submit" class="btn btn-primary ml-4">登录</button>
+            <?php   if($_SESSION['loginError']==null):?>
+            <?php else:?>
+                <div class="alert alert-warning float-right "><?php echo $_SESSION['loginError'] ?></div>
+            <?php endif?>
+        </div>
     </form>
-<?php   if($_SESSION['loginError']):?>
-<p><?php echo $_SESSION['loginError'] ?></p>
-<?php endif?>
-
 
 <?php include 'footer.php' ?>

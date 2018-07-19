@@ -11,7 +11,7 @@ session_start();
 function getArticles( )
 {
     $files=scandir("articles");
-    $files = array_diff($files, array('.', '..'));
+    $files = array_diff($files, array(".", ".."));
 
     //如果是空目录则返回false
     if (empty($files)) {
@@ -30,7 +30,7 @@ function getArticles( )
 
 function view($render)
 {
-    include "template". '/' . basename($_SERVER['PHP_SELF']);
+    include "template". "/" . basename($_SERVER["PHP_SELF"]);
 
 }
 
