@@ -1,27 +1,26 @@
-<?php include 'header.php';?>
-<div style="max-width: 400px; margin:0 auto;">
-    <?php if($_SESSION['loginError']):?>
-    <div class="alert alert-success" role="alert">
-        <ul>
-            <?php foreach ($_SESSION['loginError'] as $error):?>
-                <li><?php echo $error;?></li>
-            <?php endforeach;?>
-        </ul>
-    </div>
-    <?php endif;?>
-    <div class="page-header">
-        <h1>用户登录 <small><a href="reg.php">注册新账号</a></small></h1>
-    </div>
-    <form role="form" action="login-post.php" method="post" >
+<?php include "header.php";?>
+<div style="height:150px"></div>
+   <div class="w-50 h-30 m-auto">
+    <form action="loginpost.php" method="post">
         <div class="form-group">
-            <label for="username">用户名</label>
-            <input type="text" class="form-control" id="username" placeholder="" name="username">
+            <label >账号</label>
+            <input type="text" class="form-control" name="id" placeholder="Identity">
         </div>
         <div class="form-group">
-            <label for="password">密码</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="">
+            <label >密码</label>
+            <input type="password" class="form-control" name="passwd" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-default">登录</button>
+
+        <div>
+            <button type="submit" class="btn btn-primary ml-4">登录</button>
+            <?php   if(isset($_SESSION["loginError"])):?>
+                <?php   if($_SESSION["loginError"]==null):?>
+                <?php else:?>
+                    <div class="alert alert-warning float-right "><?php echo $_SESSION["loginError"] ?></div>
+                <?php endif?>
+            <?php endif?>
+        </div>
     </form>
-</div>
-<?php include 'footer.php'?>
+    </div>
+
+<?php include "footer.php" ?>

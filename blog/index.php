@@ -1,12 +1,19 @@
 <?php
 /**
- * 博客首页
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2018/7/17 0017
+ * Time: 上午 9:43
  */
-//引入启动程序
-include 'boot.php';
 
-//准备视图中使用的变量
-$render['articles'] = getArticles();
+include "boot.php";
 
-//调用视图
+
+$render["articles"] = getArticles();
+
 view($render);
+//
+//
+//
+//include "header.php";
+//include "footer.php";

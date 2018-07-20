@@ -1,10 +1,10 @@
 <?php
-/**
- * 用户登录
- */
-include 'boot.php';
+
+include "boot.php";
+
+$_SESSION["author"]=null;
 
 view($render);
 
-// 清空验证session
-$_SESSION['loginError'] = null;
+
+$_SESSION["loginError"] = null;

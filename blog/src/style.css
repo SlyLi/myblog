@@ -1,46 +1,175 @@
-.container,
-.jumbotron .container {
-    max-width:1000px;
+* {
+    margin: 0px;
 }
-.jumbotron h1 {
+
+.hidden {
+    visibility: hidden;
+}
+
+header {
+    height: 60PX;
+    width: 100%;
+    background-color: #96b97d;
+}
+
+.my_nav {
+    background: #b1dfbb;
+}
+
+.container {
+    margin: 0px auto;
+}
+
+.vid {
+    position: fixed;
+    left: 20%;
+    top: 20%;
+    transform: translateX(-20%) translateY(-20%);
+}
+
+.round {
+    line-height: 72px;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    color: #b7985b;
+    font-family: 'Libre Baskerville Italic';
+    font-style: italic;
+    text-transform: lowercase;
     text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    border: 1.5px solid #a78c50;
 }
 
-section,
-article {
-    border: solid 1px #EEE;
-    margin:30px;
-    padding:30px;
+.round1 {
+    line-height: 72px;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    color: #b7985b;
+    font-family: 'Libre Baskerville Italic';
+    font-style: italic;
+    text-transform: lowercase;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    border: 1.5px solid #a78c50;
 }
 
-div.footer {
-    border-top: solid 1px #EEE;
-    margin:30px;
-    padding:30px;
-    text-align: right;
+.centext {
+    font-size: 24px;
 }
 
-section h1,
-section div.excerpt,
-article h1 ,
-article div.bar {
-    padding:0px;
-    margin:0px;
-    margin-bottom:30px;
+.cir1 {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    opacity: 0;
+    border: 1px solid #b7985b;
+    border-radius: 100%;
+    width: 72px;
+    height: 72px;
+    top: 0px;
+    left: 0px;
+    -webkit-animation: pulseplaybutton 3s linear infinite;
+    animation: pulseplaybutton 3s linear infinite;
 }
 
-section div.more {
-    text-align: right;
+.cir2 {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    opacity: 0;
+    border: 1px solid #b7985b;
+    border-radius: 100%;
+    -webkit-animation: pulseplaybutton 3s linear 1s infinite;
+    animation: pulseplaybutton 3s linear 1s infinite;
+    width: 72px;
+    height: 72px;
+    top: 0px;
+    left: 0px;
 }
 
-section div.more,
-section div.excerpt,
-article div.article,
-article div.bar {
-    font-size:16px;
+.cir3 {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    opacity: 0;
+    border: 1px solid #b7985b;
+    border-radius: 100%;
+    -webkit-animation: pulseplaybutton 3s linear 2s infinite;
+    animation: pulseplaybutton 3s linear 2s infinite;
+    width: 72px;
+    height: 72px;
+    top: 0px;
+    left: 0px;
 }
 
-article div.bar {
-    background-color: #EEE;
-    padding: 10px;
+.cir4 {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    opacity: 0;
+    border: px solid #b7985b;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+    top: 0px;
+    left: 0px;
+    -webkit-animation: pulseplaybutton 3s linear 3s infinite;
+    animation: pulseplaybutton 3s linear 3s infinite;
+}
+
+.cir5 {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    opacity: 0;
+    border: px solid #b7985b;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+    top: 0px;
+    left: 0px;
+}
+
+.cir5:hover {
+    -webkit-animation: pulseplaybutton 1s linear 0s infinite;
+    animation: pulseplaybutton 1s linear 0s infinite;
+    background: #000000;
+}
+
+@keyframes pulseplaybutton {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1.25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@-webkit-keyframes pulseplaybutton {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+    25% {
+        -webkit-transform: scale(1.25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+    }
 }
